@@ -99,3 +99,35 @@ Processing by DemoController#index as HTML
 Completed 200 OK in 107ms (Views: 102.8ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:10)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:10)
+Started GET "/demo/index" for 127.0.0.1 at 2017-10-31 15:14:24 +0200
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2813ms (Views: 2282.9ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 15:14:37 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 34.7ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 15:14:51 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:10)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:10)
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.4ms)
+
+
+Started GET "/demo/index" for 127.0.0.1 at 2017-10-31 15:14:56 +0200
+Processing by DemoController#index as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.1ms)
+
+
