@@ -2,3 +2,100 @@
   [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (48.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/" for 127.0.0.1 at 2017-10-31 02:43:17 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/webdev/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/webdev/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (9.0ms)
+Completed 200 OK in 662ms (Views: 34.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 03:01:47 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/webdev/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/webdev/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (23.2ms)
+Completed 200 OK in 1022ms (Views: 83.0ms)
+
+
+Started GET "/demo/index" for 127.0.0.1 at 2017-10-31 03:02:05 -0700
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1183ms (Views: 1179.5ms)
+
+
+Started GET "/demo/index" for 127.0.0.1 at 2017-10-31 03:02:54 -0700
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 38.1ms)
+
+
+Started GET "/demo/" for 127.0.0.1 at 2017-10-31 03:26:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/demo"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/demo/" for 127.0.0.1 at 2017-10-31 03:40:17 -0700
+  
+SyntaxError (/home/webdev/Sites/simple_cms/config/routes.rb:4: syntax error, unexpected '(', expecting keyword_end
+  :controller(/:action(/:id))
+              ^
+/home/webdev/Sites/simple_cms/config/routes.rb:4: end pattern with unmatched parenthesis: /:action(/
+/home/webdev/Sites/simple_cms/config/routes.rb:4: syntax error, unexpected ':', expecting end-of-input
+  :controller(/:action(/:id))
+                         ^):
+  
+config/routes.rb:4: syntax error, unexpected '(', expecting keyword_end
+config/routes.rb:4: end pattern with unmatched parenthesis: /:action(/
+config/routes.rb:4: syntax error, unexpected ':', expecting end-of-input
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:4)
+Started GET "/demo/" for 127.0.0.1 at 2017-10-31 03:41:07 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:4)
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 47.3ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:9)
+Started GET "/" for 127.0.0.1 at 2017-10-31 03:45:01 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:9)
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 107ms (Views: 102.8ms)
+
+
