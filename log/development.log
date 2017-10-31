@@ -131,3 +131,193 @@ Processing by DemoController#index as HTML
 Completed 200 OK in 30ms (Views: 29.1ms)
 
 
+Started GET "/demo/other_hello" for 127.0.0.1 at 2017-10-31 15:22:56 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:11)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:11)
+Processing by DemoController#other_hello as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 15:22:56 +0200
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 33.8ms)
+
+
+Started GET "/lynda" for 127.0.0.1 at 2017-10-31 15:29:16 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  
+ActionController::RoutingError (No route matches [GET] "/lynda"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/lynda" for 127.0.0.1 at 2017-10-31 15:29:30 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  
+ActionController::RoutingError (No route matches [GET] "/lynda"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/lynda" for 127.0.0.1 at 2017-10-31 15:29:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/lynda"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/demo/lynda" for 127.0.0.1 at 2017-10-31 15:30:07 +0200
+Processing by DemoController#lynda as HTML
+Redirected to http://lynda.com
+Completed 302 Found in 1ms
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 15:58:11 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 14.9ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 15:58:54 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:00:49 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:01:28 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.6ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:04:51 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:06:43 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.6ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:06:46 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.6ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:07:23 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 25.2ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:07:35 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 16:27:59 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.4ms)
+
+
