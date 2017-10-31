@@ -321,3 +321,73 @@ Processing by DemoController#hello as HTML
 Completed 200 OK in 21ms (Views: 20.4ms)
 
 
+Started GET "/demo/index" for 127.0.0.1 at 2017-10-31 16:53:48 +0200
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 19.5ms)
+
+
+Started GET "/demo/hello" for 127.0.0.1 at 2017-10-31 17:07:14 +0200
+Processing by DemoController#hello as HTML
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 17:07:17 +0200
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.7ms)
+
+
+Started GET "/demo/hello?id=20&page=5" for 127.0.0.1 at 2017-10-31 17:07:20 +0200
+Processing by DemoController#hello as HTML
+  Parameters: {"id"=>"20", "page"=>"5"}
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 34.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 17:18:34 +0200
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+Processing by DemoController#index as HTML
+  Rendering demo/index.html.erb within layouts/application
+  Rendered demo/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms)
+
+
+Started GET "/demo/hello?id=20&page=5" for 127.0.0.1 at 2017-10-31 17:18:35 +0200
+Processing by DemoController#hello as HTML
+  Parameters: {"id"=>"20", "page"=>"5"}
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 34.4ms)
+
+
+Started GET "/demo/hello?id=20&page=5" for 127.0.0.1 at 2017-10-31 17:20:15 +0200
+Processing by DemoController#hello as HTML
+  Parameters: {"id"=>"20", "page"=>"5"}
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 35.0ms)
+
+
+Started GET "/demo/hello?id=20&page=5" for 127.0.0.1 at 2017-10-31 17:20:19 +0200
+Processing by DemoController#hello as HTML
+  Parameters: {"id"=>"20", "page"=>"5"}
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.9ms)
+
+
+Started GET "/demo/hello?id=20&page=5" for 127.0.0.1 at 2017-10-31 17:20:22 +0200
+Processing by DemoController#hello as HTML
+  Parameters: {"id"=>"20", "page"=>"5"}
+  Rendering demo/hello.html.erb within layouts/application
+  Rendered demo/hello.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.7ms)
+
+
