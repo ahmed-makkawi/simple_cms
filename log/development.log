@@ -505,3 +505,188 @@ Migrating to CreateUsers (20171102200019)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (42.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AlterUsers (20171103074403)
+  [1m[35m (126.7ms)[0m  [1m[35mRENAME TABLE `users` TO `admin_users`[0m
+  [1m[35m (613.9ms)[0m  [1m[35mALTER TABLE `admin_users` ADD `username` varchar(25) AFTER `email`[0m
+  [1m[35m (747.7ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `email` `email` varchar(100) DEFAULT '' NOT NULL[0m
+  [1m[35m (141.0ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `password` `hashed_password` varchar(40) DEFAULT NULL[0m
+  [1m[35m (408.8ms)[0m  [1m[35mCREATE  INDEX `index_admin_users_on_username`  ON `admin_users` (`username`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103074403')[0m
+  [1m[35m (49.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AlterUsers (20171103074403)
+  [1m[35m (310.7ms)[0m  [1m[35mDROP INDEX `index_admin_users_on_username` ON `admin_users`[0m
+  [1m[35m (78.3ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `hashed_password` `password` varchar(40) DEFAULT NULL[0m
+  [1m[35m (99.3ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `email` `email` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (548.2ms)[0m  [1m[35mALTER TABLE `admin_users` DROP `username`[0m
+  [1m[35m (100.1ms)[0m  [1m[35mRENAME TABLE `admin_users` TO `users`[0m
+  [1m[35mSQL (32.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171103074403'[0m
+Migrating to CreateUsers (20171102200019)
+  [1m[35m (200.6ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[35mSQL (43.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171102200019'[0m
+Migrating to DoNothingYet (20171102151423)
+  [1m[35mSQL (37.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171102151423'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DoNothingYet (20171102151423)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171102151423')[0m
+  [1m[35m (696.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20171102200019)
+  [1m[35m (375.3ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(25), `last_name` varchar(50), `email` varchar(255) DEFAULT '' NOT NULL, `password` varchar(40), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171102200019')[0m
+  [1m[35m (63.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AlterUsers (20171103074403)
+  [1m[35m (121.5ms)[0m  [1m[35mRENAME TABLE `users` TO `admin_users`[0m
+  [1m[35m (514.2ms)[0m  [1m[35mALTER TABLE `admin_users` ADD `username` varchar(25) AFTER `email`[0m
+  [1m[35m (2773.4ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `email` `email` varchar(100) DEFAULT '' NOT NULL[0m
+  [1m[35m (98.1ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `password` `hashed_password` varchar(40) DEFAULT NULL[0m
+  [1m[35m (287.9ms)[0m  [1m[35mCREATE  INDEX `index_admin_users_on_username`  ON `admin_users` (`username`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103074403')[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateSubjects (20171103081613)
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `subjects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `position` int, `visible` tinyint(1) DEFAULT 0, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081613')[0m
+  [1m[35m (67.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePages (20171103081622)
+  [1m[35m (322.6ms)[0m  [1m[35mCREATE TABLE `pages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081622')[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSections (20171103081630)
+  [1m[35m (289.6ms)[0m  [1m[35mCREATE TABLE `sections` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081630')[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateSections (20171103081630)
+  [1m[35m (175.5ms)[0m  [1m[35mDROP TABLE `sections`[0m
+  [1m[35mSQL (44.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171103081630'[0m
+Migrating to CreatePages (20171103081622)
+  [1m[35m (178.2ms)[0m  [1m[35mDROP TABLE `pages`[0m
+  [1m[35mSQL (32.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171103081622'[0m
+Migrating to CreateSubjects (20171103081613)
+  [1m[35m (201.2ms)[0m  [1m[35mDROP TABLE `subjects`[0m
+  [1m[35mSQL (33.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171103081613'[0m
+Migrating to AlterUsers (20171103074403)
+  [1m[35m (168.5ms)[0m  [1m[35mDROP INDEX `index_admin_users_on_username` ON `admin_users`[0m
+  [1m[35m (83.0ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `hashed_password` `password` varchar(40) DEFAULT NULL[0m
+  [1m[35m (86.2ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `email` `email` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (524.9ms)[0m  [1m[35mALTER TABLE `admin_users` DROP `username`[0m
+  [1m[35m (100.2ms)[0m  [1m[35mRENAME TABLE `admin_users` TO `users`[0m
+  [1m[35mSQL (32.6ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171103074403'[0m
+Migrating to CreateUsers (20171102200019)
+  [1m[35m (133.5ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[35mSQL (33.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171102200019'[0m
+Migrating to DoNothingYet (20171102151423)
+  [1m[35mSQL (32.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20171102151423'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DoNothingYet (20171102151423)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171102151423')[0m
+  [1m[35m (57.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20171102200019)
+  [1m[35m (321.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(25), `last_name` varchar(50), `email` varchar(255) DEFAULT '' NOT NULL, `password` varchar(40), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171102200019')[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AlterUsers (20171103074403)
+  [1m[35m (98.5ms)[0m  [1m[35mRENAME TABLE `users` TO `admin_users`[0m
+  [1m[35m (513.7ms)[0m  [1m[35mALTER TABLE `admin_users` ADD `username` varchar(25) AFTER `email`[0m
+  [1m[35m (738.2ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `email` `email` varchar(100) DEFAULT '' NOT NULL[0m
+  [1m[35m (88.2ms)[0m  [1m[35mALTER TABLE `admin_users` CHANGE `password` `hashed_password` varchar(40) DEFAULT NULL[0m
+  [1m[35m (242.0ms)[0m  [1m[35mCREATE  INDEX `index_admin_users_on_username`  ON `admin_users` (`username`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103074403')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSubjects (20171103081613)
+  [1m[35m (323.7ms)[0m  [1m[35mCREATE TABLE `subjects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `position` int, `visible` tinyint(1) DEFAULT 0, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081613')[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePages (20171103081622)
+  [1m[35m (333.8ms)[0m  [1m[35mCREATE TABLE `pages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081622')[0m
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSections (20171103081630)
+  [1m[35m (311.1ms)[0m  [1m[35mCREATE TABLE `sections` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171103081630')[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
