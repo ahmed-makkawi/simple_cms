@@ -690,3 +690,89 @@ DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated an
 DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
 DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('First Subject', 1, 1, '2017-11-03 14:12:56', '2017-11-03 14:12:56')[0m
+  [1m[35m (54.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `created_at`, `updated_at`) VALUES ('Second Subject', 2, '2017-11-03 14:18:30', '2017-11-03 14:18:30')[0m
+  [1m[35m (71.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.1ms)[0m  [1m[33mUPDATE `subjects` SET `name` = 'Initial subject', `updated_at` = '2017-11-03 14:21:12' WHERE `subjects`.`id` = 1[0m
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `subjects` SET `name` = 'next subject', `visible` = 1, `updated_at` = '2017-11-03 14:23:06' WHERE `subjects`.`id` = 2[0m
+  [1m[35m (39.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('bad subject', '2017-11-03 14:29:38', '2017-11-03 14:29:38')[0m
+  [1m[35m (35.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 3[0m
+  [1m[35m (79.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `created_at`, `updated_at`) VALUES ('third subject', 4, '2017-11-03 14:39:28', '2017-11-03 14:39:28')[0m
+  [1m[35m (45.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`name` = 'Initial Subject' LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 11[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` ASC LIMIT 1[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1 LIMIT 11[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE (visible => true) LIMIT 11[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`position` = 1 AND `subjects`.`visible` = 1 LIMIT 11[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`position` = 1 AND `subjects`.`visible` = 0 LIMIT 11[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`position` = 1 AND `subjects`.`visible` = 0 ORDER BY `subjects`.`id` ASC LIMIT 1[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`position` = 1 AND `subjects`.`visible` = 1 ORDER BY `subjects`.`id` ASC LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` ORDER BY `subjects`.`position` ASC LIMIT 11[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 1[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 1 OFFSET 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 1 OFFSET 2[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1 ORDER BY position ASC LIMIT 1 OFFSET 1[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1 LIMIT 11[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 0 LIMIT 11[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1 LIMIT 11[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` ORDER BY created_at DESC LIMIT 11[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1 ORDER BY position ASC LIMIT 11[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 11[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(8363530219080587145, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(8363530219080587145)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/webdev/Sites/simple_cms/config/routes.rb:12)
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 1 LIMIT 1[0m
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` LIMIT 11[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  `subjects`.* FROM `subjects` LIMIT 11[0m
